@@ -5,7 +5,7 @@
 
 Bills Sponsored:
 <ul>
-{{#each model.bills as |bills|}}
-  <li>{{bills.official_title}}</li>
+{{#each model.bills as |bill|}}
+  {{bill-view bill=bill}}
 {{/each}}
 </ul>

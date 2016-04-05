@@ -1,6 +1,11 @@
+{{#each model.legislator as |legislator|}}
 
-  {{#each model as |legislator|}}
-  <p>
-    {{legislator.first_name}} {{legislator.last_name}}
-  </p>
+  {{legislator-view legislator=legislator }}
 {{/each}}
+
+Bills Sponsored:
+<ul>
+{{#each model.bills as |bills|}}
+  <li>{{bills.official_title}}</li>
+{{/each}}
+</ul>

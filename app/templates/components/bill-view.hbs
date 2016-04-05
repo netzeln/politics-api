@@ -1,10 +1,12 @@
-<h4 {{action 'showDetails'}}>{{bill.official_title}}</h4>
-{{#if areDetailsShowing}}
-<div class="bill_details">
-  <p>Bill id: {{bill.bill_id}}</p>
-  <p>Bill Sponsor: {{bill.sponsor.title}}, {{bill.sponsor.first_name}} {{bill.sponsor.last_name}}</p>
-  <p>Date introduced: {{bill.introduced_on}}</p>
-  <p><a href={{bill.urls.congress}}>Link to Bill</a></p>
-  <button class="btn btn-xs btn-warning" {{action 'hideDetails'}}>Hide Details</button>
+<div class="container">
+  <h4 {{action 'showDetails'}}>{{bill.official_title}}</h4>
+  {{#if areDetailsShowing}}
+    <div class="bill_details">
+      <p>Bill id: {{bill.bill_id}}</p>
+      <p>Bill Sponsor: {{bill.sponsor.title}}, {{bill.sponsor.first_name}} {{bill.sponsor.last_name}}</p>
+      <p>Date introduced: {{bill.introduced_on}}</p>
+      <p><a href={{bill.urls.congress}}>Link to Bill</a></p>
+      <button class="btn btn-xs btn-warning" {{action 'hideDetails'}}>Hide Details</button>
+    </div>
+  {{/if}}
 </div>
-{{/if}}

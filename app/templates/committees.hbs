@@ -1,0 +1,10 @@
+<h1>All Committees</h1>
+  <p>click the committee to see it's subcommittees</p>
+  <hr>
+<ul>
+  {{#each model as |committee|}}
+    <li><a href={{committee.name}}>{{committee.name}}</a>
+      <br>
+    </li>
+  {{/each}}
+</ul>

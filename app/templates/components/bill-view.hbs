@@ -3,7 +3,7 @@
   {{#if areDetailsShowing}}
     <div class="bill_details">
       <p>Bill id: {{bill.bill_id}}</p>
-      <p>Bill Sponsor: {{bill.sponsor.title}}, {{bill.sponsor.first_name}} {{bill.sponsor.last_name}}</p>
+      <p>Bill Sponsor: {{bill.sponsor.title}}. {{bill.sponsor.first_name}} {{bill.sponsor.last_name}}</p> <p> {{#link-to 'legislator' bill.sponsor_id}}{{bill.sponsor_id}}{{/link-to}}</p>
       <p>Date introduced: {{bill.introduced_on}}</p>
       <p><a href={{bill.urls.congress}}>Link to Bill</a></p>
       <button class="btn btn-xs btn-warning" {{action 'hideDetails'}}>Hide Details</button>

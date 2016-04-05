@@ -3,7 +3,7 @@
   <hr>
 <ul>
   {{#each model as |committee|}}
-    <li><a href={{committee.name}}>{{committee.name}}</a>
+    <li> {{#link-to 'subcommittee' committee.committee_id}}{{committee.name}}{{/link-to}}
       <br>
     </li>
   {{/each}}

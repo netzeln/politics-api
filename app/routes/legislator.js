@@ -7,7 +7,7 @@ export default Ember.Route.extend({
     var url = 'http://congress.api.sunlightfoundation.com/legislators?apikey=' +key+ '&bioguide_id=' + bill.sponsor_id;
 
     var url2 = 'http://congress.api.sunlightfoundation.com/bills?apikey=' +key+ '&sponsor_id=' + bill.sponsor_id;
-console.log(url2);
+
     return Ember.RSVP.hash({
       legislator: Ember.$.getJSON(url).then(function(responseJSON){
         return responseJSON.results;
